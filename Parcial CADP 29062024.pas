@@ -161,8 +161,8 @@ begin
         actual := actual^.siguiente;
     end;
 
-    if (anterior = l) then // Caso para insertar al inicio
-        l := nuevo
+    if (anterior = l) then 
+    	l := nuevo
     else
         anterior^.siguiente := nuevo;
 
