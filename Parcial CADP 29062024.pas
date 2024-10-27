@@ -7,7 +7,7 @@ type
         codigo: integer;
         anio: rAnios;
         monto: real;
-        dniCliente: LongInt;
+        dniCliente: LongInt; // SE PUSO LONG INT PARA QUE FUNCIONE CON NUMEROS DE DNI MAS GRANDES
     end;
     
     lista = ^nodo;
