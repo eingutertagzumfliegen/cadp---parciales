@@ -7,7 +7,7 @@ type
         codigo: integer;
         anio: rAnios;
         monto: real;
-        dniCliente: LongInt; // Cambiado a LongInt
+        dniCliente: LongInt;
     end;
     
     lista = ^nodo;
