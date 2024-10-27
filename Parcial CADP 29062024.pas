@@ -22,7 +22,6 @@ procedure cargarLista(var l: lista);
 var
     nuevaCompra: lista;
 begin
-    // Compra 1
     new(nuevaCompra);
     nuevaCompra^.dato.codigo := 101;
     nuevaCompra^.dato.anio := 1985;
@@ -39,7 +38,6 @@ begin
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
 
-    // Compra 2
     new(nuevaCompra);
     nuevaCompra^.dato.codigo := 102;
     nuevaCompra^.dato.anio := 1992;
@@ -48,7 +46,6 @@ begin
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
 
-    // Compra 3
     new(nuevaCompra);
     nuevaCompra^.dato.codigo := 103;
     nuevaCompra^.dato.anio := 2010;
@@ -57,7 +54,6 @@ begin
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
 
-    // Compra 4
     new(nuevaCompra);
     nuevaCompra^.dato.codigo := 104;
     nuevaCompra^.dato.anio := 2015;
@@ -66,7 +62,6 @@ begin
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
 
-    // Compra 5
     new(nuevaCompra);
     nuevaCompra^.dato.codigo := 105;
     nuevaCompra^.dato.anio := 2020;
@@ -83,7 +78,6 @@ begin
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
     
-    // Compra 6
     new(nuevaCompra);
     nuevaCompra^.dato.codigo := 106;
     nuevaCompra^.dato.anio := 2023;
@@ -92,7 +86,6 @@ begin
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
     
-    // Compra 7
     new(nuevaCompra);
     nuevaCompra^.dato.codigo := 107;
     nuevaCompra^.dato.anio := 2018;
@@ -135,7 +128,6 @@ begin
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
 
-    // Compra 10
     new(nuevaCompra);
     nuevaCompra^.dato.codigo := 110;
     nuevaCompra^.dato.anio := 2019;
@@ -159,9 +151,9 @@ var
     actual, anterior, nuevo: lista;
 begin
     new(nuevo);
-    nuevo^.dato := c; // Asignar c a nuevo^.dato
+    nuevo^.dato := c; 
     actual := l;
-    anterior := nil; // Cambiado para inicializar correctamente
+    anterior := l; 
 
     while (actual <> nil) and (c.dniCliente > actual^.dato.dniCliente) do
     begin
@@ -169,7 +161,7 @@ begin
         actual := actual^.siguiente;
     end;
 
-    if (anterior = nil) then // Caso para insertar al inicio
+    if (anterior = l) then // Caso para insertar al inicio
         l := nuevo
     else
         anterior^.siguiente := nuevo;
@@ -257,23 +249,23 @@ begin
             v[l2^.dato.anio] := v[l2^.dato.anio] + l2^.dato.monto;
             cantCompras := cantCompras + 1;
             
-			if (l2^.dato.codigo mod 10 = 0) then
-				montoTotal:= montoTotal + l2^.dato.monto;
+		if (l2^.dato.codigo mod 10 = 0) then
+			montoTotal:= montoTotal + l2^.dato.monto;
 				
             l2 := l2^.siguiente;
         end;
         
         actualizarMaximos(dniActual, cantCompras, dniMax1, dniMax2, maxCompra1, maxCompra2);
     end;
-		anioMenosFacturacion(v);
+	anioMenosFacturacion(v);
   
 	writeln('--------------------------------------------------------------');
-    writeln('El año con mejor facturación es el año: ', anioMenosFacturacion(v));
-    writeln('--------------------------------------------------------------');
-    writeln('Los clientes que más compras hicieron fueron: ', dniMax1, ' y ', dniMax2);
-    writeln('--------------------------------------------------------------');
-    writeln('El monto total facturado de compras con código multiplo de 10 es: $', montoTotal:0:2);
-    writeln('--------------------------------------------------------------');
+    	writeln('El año con mejor facturación es el año: ', anioMenosFacturacion(v));
+    	writeln('--------------------------------------------------------------');
+    	writeln('Los clientes que más compras hicieron fueron: ', dniMax1, ' y ', dniMax2);
+	writeln('--------------------------------------------------------------');
+    	writeln('El monto total facturado de compras con código multiplo de 10 es: $', montoTotal:0:2);
+    	writeln('--------------------------------------------------------------');
 end;
 
 procedure imprimirLista(l: lista);
@@ -296,8 +288,8 @@ var
 begin
     l := nil;
     l2 := nil;
-	cargarLista(l);
-    cargarLista2(l, l2); // Procesar la lista y llenar l2       
+    cargarLista(l);
+    cargarLista2(l, l2);
     imprimirLista(l2);
     procesarInformar(l2, v);
 end.
