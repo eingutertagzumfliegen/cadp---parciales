@@ -53,7 +53,7 @@ begin
     nuevaCompra^.dato.codigo := 103;
     nuevaCompra^.dato.anio := 2010;
     nuevaCompra^.dato.monto := 875.00;
-    nuevaCompra^.dato.dniCliente := 20334567;
+    nuevaCompra^.dato.dniCliente := 28285094;
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
 
@@ -79,7 +79,7 @@ begin
     nuevaCompra^.dato.codigo := 108;
     nuevaCompra^.dato.anio := 2017;
     nuevaCompra^.dato.monto := 900.00;
-    nuevaCompra^.dato.dniCliente := 35203844;
+    nuevaCompra^.dato.dniCliente := 25203844;
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
     
@@ -106,7 +106,7 @@ begin
     nuevaCompra^.dato.codigo := 108;
     nuevaCompra^.dato.anio := 2021;
     nuevaCompra^.dato.monto := 900.00;
-    nuevaCompra^.dato.dniCliente := 35203844;
+    nuevaCompra^.dato.dniCliente := 25203844;
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
     
@@ -114,7 +114,7 @@ begin
     nuevaCompra^.dato.codigo := 1098;
     nuevaCompra^.dato.anio := 2020;
     nuevaCompra^.dato.monto := 900.00;
-    nuevaCompra^.dato.dniCliente := 35203844;
+    nuevaCompra^.dato.dniCliente := 25203844;
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
     
@@ -140,7 +140,7 @@ begin
     nuevaCompra^.dato.codigo := 110;
     nuevaCompra^.dato.anio := 2019;
     nuevaCompra^.dato.monto := 2800.75;
-    nuevaCompra^.dato.dniCliente := 27235094;
+    nuevaCompra^.dato.dniCliente := 28285094;
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
     
@@ -148,7 +148,7 @@ begin
     nuevaCompra^.dato.codigo := 11010;
     nuevaCompra^.dato.anio := 2020;
     nuevaCompra^.dato.monto := 3800.75;
-    nuevaCompra^.dato.dniCliente := 27235094;
+    nuevaCompra^.dato.dniCliente := 28285094;
     nuevaCompra^.siguiente := l;
     l := nuevaCompra;
     
